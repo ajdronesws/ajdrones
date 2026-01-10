@@ -76,7 +76,7 @@ const Home = () => {
             <div className="col-md-6 col-lg-4">
               <div className="feature-card">
                 <div className="feature-icon-wrapper">
-                  <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&h=300&fit=crop" alt="Expert Training" className="feature-image" />
+                  <img src="/assets/Training.jpeg" alt="Expert Training" className="feature-image" />
                 </div>
                 <h4>Expert Training</h4>
                 <p>Learn from industry professionals with years of experience in drone technology</p>
@@ -103,7 +103,7 @@ const Home = () => {
             <div className="col-md-6 col-lg-4">
               <div className="feature-card">
                 <div className="feature-icon-wrapper">
-                  <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop" alt="Innovation Focus" className="feature-image" />
+                  <img src="/assets/Innovation.jpeg" alt="Innovation Focus" className="feature-image" />
                 </div>
                 <h4>Innovation Focus</h4>
                 <p>Encourage creativity and entrepreneurial thinking in drone applications</p>
