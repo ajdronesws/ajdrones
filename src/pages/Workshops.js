@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import MouseEffects from '../components/MouseEffects';
-import RecentWorkshops from '../components/RecentWorkshops';
+// import RecentWorkshops from '../components/RecentWorkshops';
 import './Workshops.css';
 
 const Workshops = () => {
