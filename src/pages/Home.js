@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import RecentWorkshops from '../components/RecentWorkshops';
+// import RecentWorkshops from '../components/RecentWorkshops';
 import MouseEffects from '../components/MouseEffects';
 import './Home.css';
 
@@ -94,7 +94,7 @@ const Home = () => {
             <div className="col-md-6 col-lg-4">
               <div className="feature-card">
                 <div className="feature-icon-wrapper">
-                  <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=400&h=300&fit=crop" alt="Safety First" className="feature-image" />
+                  <img src="/assets/SafetyFirstHome.jpeg" alt="Safety First" className="feature-image" />
                 </div>
                 <h4>Safety First</h4>
                 <p>Comprehensive safety training and regulatory awareness for responsible flying</p>
@@ -112,7 +112,7 @@ const Home = () => {
             <div className="col-md-6 col-lg-4">
               <div className="feature-card">
                 <div className="feature-icon-wrapper">
-                  <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=400&h=300&fit=crop" alt="Real-World Applications" className="feature-image" />
+                  <img src="/assets/RealworldHome.jpeg" alt="Real-World Applications" className="feature-image" />
                 </div>
                 <h4>Real-World Applications</h4>
                 <p>Understand how drones transform industries from agriculture to smart cities</p>

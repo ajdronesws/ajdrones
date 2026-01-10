@@ -7,7 +7,7 @@ const Services = () => {
   const services = [
     {
       icon: '🎓',
-      title: 'Drone Abhyas',
+      title: 'Drone Training Programs',
       subtitle: 'Training & Certification',
       description: 'Comprehensive training programs designed to build skilled drone professionals for the growing UAV industry.',
       features: [
@@ -43,7 +43,7 @@ const Services = () => {
         'Bulk enrollment options',
         'Progress tracking'
       ],
-      image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop'
+      image: '/assets/Instituional.jpeg'
     },
     {
       icon: '💼',
@@ -83,41 +83,101 @@ const Services = () => {
         'Regulatory information'
       ],
       image: '/assets/edu.png'
-    }
+    },
+    {
+  icon: '🛠️',
+  title: 'Hands-On Training',
+  subtitle: 'Practical Drone Mastery',
+  description: 'Intensive practical training sessions where learners work directly with drones, flight controllers, sensors, and software to gain real-world experience.',
+  features: [
+    'Live drone assembly',
+    'Real flight practice',
+    'Sensor & camera setup',
+    'Troubleshooting & repairs',
+    'Mission planning & execution'
+  ],
+  image: '/assets/Training.jpeg'
+}
+
   ];
 
-  const applications = [
-    {
-      title: 'Agriculture',
-      description: 'Crop monitoring, spraying, and precision farming',
-      icon: '🌾'
-    },
-    {
-      title: 'Surveying & Mapping',
-      description: 'Land surveys, 3D mapping, and GIS applications',
-      icon: '🗺️'
-    },
-    {
-      title: 'Disaster Response',
-      description: 'Emergency services and disaster management',
-      icon: '🚨'
-    },
-    {
-      title: 'Smart Cities',
-      description: 'Urban planning and infrastructure monitoring',
-      icon: '🏙️'
-    },
-    {
-      title: 'Defense & Security',
-      description: 'Surveillance and security applications',
-      icon: '🛡️'
-    },
-    {
-      title: 'Media & Cinematography',
-      description: 'Photography, videography, and filmmaking',
-      icon: '📹'
-    }
-  ];
+const applications = [
+  {
+    title: "Logistics & Delivery",
+    description: "E-commerce package delivery, rural last-mile delivery, postal transport in difficult terrain.",
+    icon: "📦",
+    image: "/assets/logistics.png"
+  },
+  {
+    title: "Smart Cities",
+    description: "Traffic monitoring, city planning, public safety surveillance.",
+    icon: "🏙️",
+    image: "/assets/SmartCities.jpeg"
+  },
+  {
+    title: "Entertainment & Drone Shows",
+    description: "Drone light shows, weddings, brand promotions, theme park attractions.",
+    icon: "🎆",
+    image: "/assets/DroneShow.png.jpeg"
+  },
+  {
+    title: "Agriculture",
+    description: "Crop spraying, field monitoring, soil analysis, irrigation planning.",
+    icon: "🌾",
+    image: "/assets/agri.png"
+  },
+  {
+    title: "Survey & Mapping",
+    description: "Land surveys, 3D terrain mapping, topographic analysis.",
+    icon: "🗺️",
+    image: "/assets/mapping.jpg"
+  },
+  
+  {
+    title: "Disaster Response",
+    description: "Search & rescue, flood and fire assessment, emergency supply drops.",
+    icon: "🚨",
+    image: "/assets/disaster.png"
+  },
+  
+  {
+    title: "Construction & Infrastructure",
+    description: "Site monitoring, bridge, road, dam and high-rise inspection.",
+    icon: "🏗️",
+    image: "/assets/ConNInfra.png"
+  },
+  {
+    title: "Environment & Wildlife",
+    description: "Forest monitoring, wildlife tracking, anti-poaching, pollution tracking.",
+    icon: "🌍",
+    image: "/assets/environment.jpg"
+  },
+  {
+    title: "Defense & Security",
+    description: "Border surveillance, tactical reconnaissance, security patrols.",
+    icon: "🛡️",
+    image: "/assets/defense.jpg"
+  },
+  {
+    title: "Energy & Utilities",
+    description: "Power line, wind turbine, solar plant and pipeline inspections.",
+    icon: "⚡",
+    image: "/assets/energy.jpg"
+  },
+  {
+    title: "Mining & Industrial Inspection",
+    description: "Mine surveying, industrial plant inspection, hazard detection.",
+    icon: "⛏️",
+    image: "/assets/mining.jpg"
+  },
+  {
+    title: "Media & Cinema",
+    description: "Aerial cinematography, filmmaking, sports broadcasting.",
+    icon: "🎥",
+    image: "/assets/media.jpg"
+  }
+];
+
 
   return (
     <div className="services-page">
@@ -191,21 +251,13 @@ const Services = () => {
             </div>
           </div>
           <div className="row g-4">
-            {applications.map((app, index) => {
-              const appImages = [
-                '/assets/agri.png', // Agriculture drone
-                '/assets/mapping.jpg', // Surveying drone
-                '/assets/disaster.png', // Emergency drone
-                'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=400&h=300&fit=crop', // Smart city drone
-                'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop', // Security drone
-                'https://images.unsplash.com/photo-1529107386315-e4a50d1f98d8?w=400&h=300&fit=crop'  // Photography drone
-              ];
+            {applications.slice(0,6).map((app, index) => {
               return (
                 <div key={index} className="col-md-6 col-lg-4">
                   <div className="application-card">
                     <div className="app-image-wrapper">
                       <img 
-                        src={appImages[index]}
+                        src={app.image}
                         alt={app.title}
                         className="app-image"
                       />
@@ -218,7 +270,16 @@ const Services = () => {
             })}
           </div>
         </div>
+      
+
       </section>
+        <div className=" applications-section row p-5">
+  <div className="col-12 text-end pr-5">
+    <Link to="/more-services" className="btn btn-outline-primary">
+      More Applications →
+    </Link>
+  </div>
+</div>
 
       {/* CTA Section */}
       <section className="services-cta py-5">

@@ -124,7 +124,7 @@
 
 .philosophy-image-wrapper {
   width: 100%;
-  height: 200px;
+  height: auto;
   overflow: hidden;
   border-radius: 12px;
   margin-bottom: 1.5rem;
@@ -134,7 +134,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  
 }
 
 .philosophy-card:hover .philosophy-image {

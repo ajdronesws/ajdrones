@@ -11,6 +11,7 @@ import Services from './pages/Services';
 import Workshops from './pages/Workshops';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
+import MoreServices from './pages/MoreServices';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/more-services" element={<MoreServices />} />
             <Route path="/workshops" element={<Workshops />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<Home />} />
