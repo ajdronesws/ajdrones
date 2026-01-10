@@ -3,7 +3,6 @@ import './MouseEffects.css';
 
 const MouseEffects = () => {
   const canvasRef = useRef(null);
-  const linesRef = useRef([]);
   const mouseRef = useRef({ x: 0, y: 0 });
   const animationFrameRef = useRef(null);
 
