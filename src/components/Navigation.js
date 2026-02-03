@@ -24,7 +24,8 @@ const Navigation = () => {
   return (
     <nav className={`navbar navbar-expand-lg fixed-top ${isScrolled ? 'navbar-scrolled' : ''}`}>
       <div className="container">
-        <Link className="navbar-brand" to="/">
+        
+          <Link className="navbar-brand" to="/">
           <div className="brand-container">
             <img src="/assets/logo.png" alt="AJ Drones Logo" className="brand-logo-image" />
             <div className="brand-text-container">
@@ -33,6 +34,9 @@ const Navigation = () => {
             </div>
           </div>
         </Link>
+        
+      
+          
         <button
           className="navbar-toggler"
           type="button"
@@ -75,14 +79,14 @@ const Navigation = () => {
               </Link>
             </li>
 
-            
           </ul>
          
         </div>
-      </div>
-      <button className="btn btn-theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
+        <button className="btn btn-theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
                 {theme === 'dark' ? '☀️' : '🌙'}
               </button>
+        </div>
+      
     </nav>
   );
 };
