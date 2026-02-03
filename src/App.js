@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+
 import { ThemeProvider } from './context/ThemeContext';
 import Navigation from './components/Navigation';
 import ScrollToTop from './components/ScrollToTop';
@@ -12,8 +13,28 @@ import Workshops from './pages/Workshops';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import MoreServices from './pages/MoreServices';
+import Loading from './Loading';
 
 function App() {
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+
+    // Simulate website preparation
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2500); // ⭐ adjust (2000–3500 recommended)
+
+    return () => clearTimeout(timer);
+
+  }, []);
+
+  // ⭐ SHOW LOADER FIRST
+  if (isLoading) {
+    return <Loading />;
+  }
+
   return (
     <ThemeProvider>
       <Router>
@@ -38,4 +59,3 @@ function App() {
 }
 
 export default App;
-

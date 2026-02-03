@@ -1,0 +1,58 @@
+.loading-container{
+    position: fixed;
+    inset: 0;
+    background: #020617; /* deep tech color */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    z-index:9999;
+}
+
+/* Keep canvas behind */
+.mouse-effects-canvas{
+    position:absolute;
+    width:100%;
+    height:100%;
+    z-index:0;
+}
+
+.loading-content{
+    position:relative;
+    z-index:2;
+    text-align:center;
+}
+
+/* Glow Animation */
+.loading-image{
+    width:140px;
+    animation: glowPulse 2s infinite ease-in-out;
+}
+
+@keyframes glowPulse {
+
+    0%{
+        transform: scale(1);
+        filter: drop-shadow(0 0 5px #38bdf8);
+        opacity:0.8;
+    }
+
+    50%{
+        transform: scale(1.15);
+        filter: drop-shadow(0 0 35px #0ea5e9);
+        opacity:1;
+    }
+
+    100%{
+        transform: scale(1);
+        filter: drop-shadow(0 0 5px #38bdf8);
+        opacity:0.8;
+    }
+}
+
+.loading-text{
+    margin-top:20px;
+    color:#e2e8f0;
+    font-weight:600;
+    letter-spacing:2px;
+}

@@ -82,7 +82,7 @@ const Navigation = () => {
           </ul>
          
         </div>
-        <button className="btn btn-theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
+        <button className="btn btn-theme-toggle" onClick={toggleTheme} >
                 {theme === 'dark' ? '☀️' : '🌙'}
               </button>
         </div>
